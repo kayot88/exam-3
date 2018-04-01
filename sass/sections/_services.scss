@@ -1,0 +1,149 @@
+ .services-section{
+ 	&__cont{
+ 		@include make-container();
+ 		@include make-container-max-widths();		
+ 	}
+
+ 	&__wrap{
+ 		@include make-row();
+ 	}
+
+ 	&__title{
+ 		@include make-col-ready();
+ 		@include make-col(12);
+ 		color: #9c0;
+ 		font-size: 36px;
+ 		font-weight: 700;
+ 		line-height: 24px;
+ 		margin: 60px 0;
+ 	}
+ 	&__list {
+ 		@include make-col-ready();
+ 		@include make-col(12);
+ 		list-style: none;
+ 		margin: 0 0 50px;
+ 		display: flex;
+ 		justify-content: space-between;
+ 	}
+ 	&__item {
+ 		text-align: center;
+ 		height: 70px;
+ 		line-height: 70px;
+ 		flex-basis: 215px;
+ 		background-color: #0099cc;
+ 		position: relative;
+ 		margin-bottom: 10px;
+ 		@include transition(1s);
+ 		&:hover {
+ 			background-color: #99cc00;
+ 			@include transition(1s);
+ 			&:after {
+ 				content: "";
+ 				position: absolute;
+ 				bottom: -19px;
+ 				left: 50%;
+ 				transform: translateX(-50%);
+ 				border: 10px solid transparent;
+ 				border-top-color: #99cc00;
+ 				@include transition(1s);
+ 			}
+ 		}
+ 	}
+
+ 	&__link {
+ 		text-transform: uppercase;
+ 		display: inline-block;
+ 		font-size: 18px;
+ 		line-height: 70px;
+ 		color: white; 
+ 		width: 100%;
+ 		&:hover {
+ 			color: white;
+ 			text-decoration: none;
+ 		}
+ 	}
+
+ 	///
+ 	&__main {
+ 		@include make-row();
+ 	}
+ 	&__text {
+ 		@include make-col-ready();
+ 		@include make-col(12);
+
+ 		@include media-breakpoint-up(md) {
+ 			@include make-col(7);
+ 		}
+ 	}
+ 	&__subtitle {
+ 		text-transform: uppercase;
+ 		padding: 15px;
+ 		font-size: 24px;
+ 		color: #0099cc;
+
+ background: linear-gradient(90deg, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+
+ 		span {
+ 			font-weight: 700;
+ 		}
+ 	}
+ 	p {
+ 		margin: 30px 0 25px;
+ 		color:  #333333;
+ 		font-size: 14px;
+ 		line-height: 24px;
+ 		padding-left: 15px;
+ 	}
+
+ 	&__sublist {
+ 		padding-left: 0;
+ 		list-style: none;
+ 	}
+
+ 	&__subitem {
+ 		color:  #333333;
+ 		font-size: 14px;
+ 		padding: 15px;
+ 		border-bottom: 1px solid #cccccc;
+
+ 		p {
+ 			margin: 0;
+ 			position: relative;
+
+ 			&:before {
+ 				position: absolute;
+ 				left: 0;
+ 				color: #0099cc; 
+ 				font-size: 20px;
+ 				content: "\f125";
+ 				font-family: "Ionicons";
+ 			}
+ 		}
+ 	}
+
+ 	&__img {
+ 		@include make-col-ready();
+ 		@include make-col(4);
+
+ 		@include media-breakpoint-up(md) {
+ 			@include make-col-offset(1);
+ 		}
+ 	}
+ }
+ 
+ .active {
+ 	background-color: #99cc00;
+ 	line-height: 70px;
+ 	display: inline-block;
+ 	width: 100%;
+
+ 	&:after {
+ 		content: "";
+ 		position: absolute;
+ 		bottom: -19px;
+ 		left: 50%;
+ 		transform: translateX(-50%);
+ 		border: 10px solid transparent;
+ 		border-top-color: #99cc00;
+ 	}
+ }

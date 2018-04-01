@@ -1,0 +1,67 @@
+.conect-section{
+	&__cont{
+		@include make-container();
+		@include make-container-max-widths();
+
+	}
+	&__wrap{
+		@include make-row();
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		height: 80px;
+	}
+	&__title{
+		@include make-col-ready();
+		@include make-col(3);
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		color: white;
+		font-family: "Myriad Pro";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	&__text{
+		@include make-col-ready();
+		@include make-col(2);
+		color: white;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	&__social{
+		@include make-col-ready();
+		@include make-col(2);
+		margin: 0;
+		padding: 0;	
+	}
+	&__list{
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+
+	}
+	&__item{
+		@include transition(1s);
+		&:not(:first-child){
+			margin-left: 20px;
+			font-size: 20px;
+			font-weight: 400;
+		}
+		&:hover{
+			cursor: pointer;
+			color: #000;
+			@include transition(1s);
+		}
+	}
+	&__link{
+		text-decoration: none;
+	}
+}
+.fa{
+	color: #fff;
+}

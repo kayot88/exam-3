@@ -1,0 +1,21 @@
+//base
+@import './base/_mixins.scss';
+@import './base/_colors.scss';
+@import './base/_fonts.scss';
+@import './base/_animations.scss';
+@import './base/_layout.scss';
+
+//sections: ;
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "./sections/header.scss";
+@import "./sections/services.scss";
+@import "./sections/paralax.scss";
+@import "./sections/gallery.scss";
+@import "./sections/slider.scss";
+@import "./sections/contact.scss";
+@import "./sections/footer.scss";
+// @import "./sections/about.scss";
+
+
+
+

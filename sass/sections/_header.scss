@@ -1,0 +1,147 @@
+.fair{
+	@include make-container();
+	@include make-container-max-widths();
+	&__wrapper{
+		@include make-row();		
+		text-align: center;
+	}
+	&__wrapperTitle{
+		@include make-row();		
+		text-align: center;	
+		margin-top: 110px;	
+	}
+	&__logo{
+		@include make-col-ready();
+		@include make-col(12);
+		margin-top: 40px;
+	}
+
+	&__title{
+		@include make-col-ready();
+		@include make-col(9);
+		border-top: solid 1px #dae6cd;
+		border-bottom: solid 1px #dae6cd;
+		margin: 0 auto;
+		align-items: center;
+		height: 100%;
+		text-shadow: 1px 1.7px 0 rgba(0, 0, 0, 0.5);
+		color: white;
+		font-size: 40px;
+		line-height: 10px;
+		text-transform: uppercase;
+		padding: 0;
+		line-height: 80px;
+	}
+	&__wrapperText{
+		@include make-row();		
+		text-align: center;	
+		margin-top: 35px;	
+	}
+	&__text{
+		@include make-col-ready();
+		@include make-col(6);
+		@include make-col-offset(3);
+		color: white;
+		font-family: Lato;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		padding: 0;
+	}
+	&__wrapperButton{
+		@include make-row();	
+		justify-content: center;	
+		text-align: center;	
+		margin-top: 35px;	
+
+	}
+	&__button{
+		@include make-col-ready();
+		@include make-col(2);
+
+		min-width: 170px;
+		height: 60px;
+		line-height: 60px;
+		background-color: #9c0;
+		border-radius: 6px;
+		color: white;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 60px;
+		margin-bottom: 90px;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 0 30px;
+		@include transition(1s);	
+		&:hover{
+			text-decoration: none;
+			color: #9c0;
+			background-color: white;	
+			@include transition(1s);	
+		}
+	}
+	&__wrapperArrow{
+		@include make-row();		
+		text-align: center;	
+		margin-top: 35px;	
+
+	}
+	&__arrow{
+		margin: 0 auto;
+		justify-content: center;
+		margin-bottom: 50px;
+		// @include make-col-ready();
+		// @include make-col(12);
+		// @include make-col-offset(5);
+		// @include transition(1s);	
+		&:hover{
+		}
+	}
+}
+
+
+.fair__nav{
+	@include make-container();
+	@include make-container-max-widths();
+	height: 100%;
+}
+.fairmenu{
+	height: 100%;
+	&__list{
+		@include make-row();		
+		text-align: left;
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 14px;
+		height: 80px;
+		padding: 0 15px;
+		@include transition(1s);
+		&:hover{
+			background-color: #99cc00;			
+			@include transition(1s);
+			text-decoration: none;
+		}
+
+	}
+	&__link{
+		text-decoration: none;
+		padding: 0 25;
+		color: white;
+		text-transform: uppercase;
+		&:hover{
+			text-decoration: none;
+			color: white;
+		}	
+
+	}
+}
+.fairmenu__but{
+width: 100%;
+}

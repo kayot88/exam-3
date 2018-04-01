@@ -1,0 +1,33 @@
+.para-section{
+	//background: url(../img/para.jpg);
+	//background-size: cover;
+	&__cont{
+		@include make-container();
+		@include make-container-max-widths();
+	}
+	&__wrap{
+		@include make-row();
+	}
+	&__title{
+		@include make-col-ready();
+		@include make-col(10);
+		@include make-col-offset(1);
+		color: white;
+		//font-family: OpenSans;
+		font-size: 48px;
+		font-weight: 600;
+		line-height: 24px;
+		margin-top: 230px;
+		margin-bottom: 40px;
+	}
+	&__text{
+		@include make-col-ready();
+		@include make-col(10);
+		@include make-col-offset(1);
+		font-size: 18px;
+		font-weight: 400;
+		color: #dbe4bb;
+		//font-family: OpenSans;
+		//line-height: 24px;
+	}
+}
